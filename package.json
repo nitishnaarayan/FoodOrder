@@ -1,0 +1,33 @@
+{
+	"name": "namaste-react",
+	"version": "1.0.0",
+	"description": "This is the Namaste React by Akshay Saini",
+	"scripts": {
+		"start": "parcel index.html",
+		"build": "parcel build index.html",
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nitishnaarayan/Food-_Order_App_RuchiKart.git"
+	},
+	"author": "Nitish Naarayan",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/nitishnaarayan/Food-_Order_App_RuchiKart/issues"
+	},
+	"homepage": "https://github.com/nitishnaarayan/Food-_Order_App_RuchiKart/blob/main/README.md",
+	"devDependencies": {
+		"parcel": "^2.15.4"
+	},
+	"browserslist": [
+		"last 5 versions"
+	],
+	"dependencies": {
+		"@tailwindcss/postcss": "^4.1.10",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"react-router-dom": "^7.6.2",
+		"tailwindcss": "^4.1.10"
+	}
+}
