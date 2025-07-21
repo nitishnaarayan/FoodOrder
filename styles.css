@@ -1,6 +1,13 @@
-/* @import "tailwindcss"; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-#heading{
+body {
+	background-color: #10172a;
+	color: #ddd;
+	font-family: Arial, Helvetica, sans-serif;
+}
+/* #heading{
     color: green;
 }
 .header{
@@ -60,4 +67,4 @@
 .user-card-img {
     width: 100px;
     height: 100px;
-}
+} */

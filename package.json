@@ -18,7 +18,9 @@
 	},
 	"homepage": "https://github.com/nitishnaarayan/Food-_Order_App_RuchiKart/blob/main/README.md",
 	"devDependencies": {
-		"parcel": "^2.15.4"
+		"parcel": "^2.15.4",
+		"postcss": "^8.5.6",
+		"tailwindcss": "^4.1.10"
 	},
 	"browserslist": [
 		"last 5 versions"
@@ -27,7 +29,6 @@
 		"@tailwindcss/postcss": "^4.1.10",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
-		"react-router-dom": "^7.6.2",
-		"tailwindcss": "^4.1.10"
+		"react-router-dom": "^7.6.2"
 	}
 }

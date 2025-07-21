@@ -1,4 +1,4 @@
-import resList from "../utils/mockData";
+
 import ResCard from "./ResCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
@@ -19,11 +19,12 @@ export const Body = () => {
 
     const fetchData = async () => {
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=10.7537699&lng=78.6951253&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+
         const jsonData = await data.json();
         console.log(jsonData);
         setListOfRestaurants(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setListOfItems(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        console.log(jsonData.data.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+
     }
 
     // if(listOfRestaurants.length === 0){
