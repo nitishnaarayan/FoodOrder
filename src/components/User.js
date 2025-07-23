@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 const User = (props) => {
-    const {name,location} = props;
+    const { name, location } = props;
     const [count] = useState(0);
     const [count1] = useState(1);
     return (
-        <div className="user-card">
+        <div className="user-card m-4 p-4 bg-gray-50 rounded-lg">
             <h1>Name: {name}</h1>
             <h2>Location: {location}</h2>
             <h3>Address: area name</h3>

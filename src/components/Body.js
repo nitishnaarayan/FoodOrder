@@ -40,27 +40,31 @@ export const Body = () => {
 
     return listOfRestaurants.length === 0 ? <Shimmer /> : (
         <div className="body">
-            <div className="filter-bar">
-                <div className="search-bar">
-                    <input type="text" name="search" value={searchText} onChange={(e) => setSearchText(e.target.value)} />
-                    <button className="search-btn" onClick={() => {
-                        console.log(searchText)
-                        // setListOfRestaurants(listOfItems);
-                        const filterItems = listOfRestaurants.filter((restaurant) => restaurant.info.name.toLowerCase().includes(searchText.toLowerCase()));
-                        setListOfItems(filterItems);
-                        console.log(filterItems);
-                        // console.log(listOfRestaurants);
-                    }}>Search</button>
+            <div className="filter flex">
+                <div className="search m-4 p-4">
+                    <input type="text" className="border border-solid border-black" value={searchText} onChange={(e) => setSearchText(e.target.value)} />
+                    <div className="search m-4 p-4 flex items-center">
+                        <button
+                            className="px-4 py-2 bg-gray-100 rounded-lg"
+                            onClick={() => {
+                                console.log(searchText)
+                                // setListOfRestaurants(listOfItems);
+                                const filterItems = listOfRestaurants.filter((restaurant) => restaurant.info.name.toLowerCase().includes(searchText.toLowerCase()));
+                                setListOfItems(filterItems);
+                                console.log(filterItems);
+                                // console.log(listOfRestaurants);
+                            }}>Search</button>
+                    </div>
+                    <button className="px-4 py-2" onClick={() => {
+                        const filteredItems = listOfRestaurants.filter((restaurant) => restaurant.info.avgRating > 4)
+                        setListOfItems(filteredItems);
+                        console.log(filteredItems);
+                    }}>
+                        Top Rated Restaurants
+                    </button>
                 </div>
-                <button className="filter-btn" onClick={() => {
-                    const filteredItems = listOfRestaurants.filter((restaurant) => restaurant.info.avgRating > 4)
-                    setListOfItems(filteredItems);
-                    console.log(filteredItems);
-                }}>
-                    Top Rated Restaurants
-                </button>
             </div>
-            <div className="res-container">
+            <div className="flex flex-wrap">
                 {
                     listOfItems.map((restaurant) => (
                         <Link key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id}><ResCard resData={restaurant} /></Link>
