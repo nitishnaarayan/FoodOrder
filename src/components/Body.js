@@ -41,27 +41,29 @@ export const Body = () => {
     return listOfRestaurants.length === 0 ? <Shimmer /> : (
         <div className="body">
             <div className="filter flex">
-                <div className="search m-4 p-4">
-                    <input type="text" className="border border-solid border-black" value={searchText} onChange={(e) => setSearchText(e.target.value)} />
-                    <div className="search m-4 p-4 flex items-center">
-                        <button
-                            className="px-4 py-2 bg-gray-100 rounded-lg"
-                            onClick={() => {
-                                console.log(searchText)
-                                // setListOfRestaurants(listOfItems);
-                                const filterItems = listOfRestaurants.filter((restaurant) => restaurant.info.name.toLowerCase().includes(searchText.toLowerCase()));
-                                setListOfItems(filterItems);
-                                console.log(filterItems);
-                                // console.log(listOfRestaurants);
-                            }}>Search</button>
-                    </div>
-                    <button className="px-4 py-2" onClick={() => {
+                <div className="search m-4 px-4 flex items-center">
+                    <button className="px-4 py-2 flex " onClick={() => {
                         const filteredItems = listOfRestaurants.filter((restaurant) => restaurant.info.avgRating > 4)
                         setListOfItems(filteredItems);
                         console.log(filteredItems);
                     }}>
                         Top Rated Restaurants
                     </button>
+                    <button
+                        className="px-4 py-4 bg-green-100 rounded-lg"
+                        onClick={() => {
+                            console.log(searchText)
+                            // setListOfRestaurants(listOfItems);
+                            const filterItems = listOfRestaurants.filter((restaurant) => restaurant.info.name.toLowerCase().includes(searchText.toLowerCase()));
+                            setListOfItems(filterItems);
+                            console.log(filterItems);
+                            // console.log(listOfRestaurants);
+                        }}>Search</button>
+                </div>
+                <div className="search m-4 p-4">
+                    <input type="text" className="border border-solid py-2 border-black" value={searchText} onChange={(e) => setSearchText(e.target.value)} />
+
+
                 </div>
             </div>
             <div className="flex flex-wrap">
