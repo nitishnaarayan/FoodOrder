@@ -1,4 +1,4 @@
-# Namaste React
+RuchiKart An food ordering app built with taste
 
 # Parcel
 
@@ -18,25 +18,3 @@
 - HTTPs
 - Tree shaking - remove unused code
 - Make different dev and production bundles
-
-# App Info
-
-/\*\*
-
--
-- Header
-- - Logo
-- - Nav Items
-- Body
-- - Search Bar
-- - Restaurant cards
-- - Cards
--      - Img
--      - Name of res, Star rating, cuisine, delivery time
-- Footer
-- - Copyright
-- - Links
-- - Address
-- - Contact
--
-- \*/
